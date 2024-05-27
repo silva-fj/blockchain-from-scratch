@@ -14,8 +14,8 @@ impl StateMachine for LightSwitch {
     type State = bool;
     type Transition = ();
 
-    fn next_state(starting_state: &bool, t: &()) -> bool {
-        todo!("Exercise 1")
+    fn next_state(starting_state: &bool, _t: &()) -> bool {
+        !starting_state
     }
 }
 
