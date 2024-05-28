@@ -61,7 +61,7 @@ impl Header {
     /// the previous state, and the current state.
     fn verify_sub_chain(&self, chain: &[Header]) -> bool {
         match chain.len() {
-            0 => self.height == 0,
+            0 => true,
             1 => {
                 chain[0].height == self.height + 1
                     && chain[0].parent == hash(&self)
